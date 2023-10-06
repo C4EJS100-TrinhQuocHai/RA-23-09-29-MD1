@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+       /* *{
+           
+            color: green;
+       } */
+
+       /* p{
+         color: red;
+       } */
+
+       /* div p{
+        color: yellow;
+       } */
+
+       /* div,p{
+        color:  rgb(8, 43, 245);
+       } */
+
+       /* div + p{
+        color: rgb(241, 7, 222);
+       } */
+
+        /* div>p{
+            background-color: red;
+        } */
+        .title{
+            background-color: rgb(221, 45, 13);
+            font-size: 16px;
+        }
+        a:active{
+            color: yellow;
+        }
+        /* p::before{
+            content: "xin chào";
+        }
+        p::after{
+            content: "quyết tâm học tập!";
+        } */
+        h1{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 100px;
+            font-style: oblique;
+            font-variant: small-caps;
+        }
+        .heading{
+          /* font-weight: 200; */
+          /* letter-spacing: 5px; */
+          /* word-spacing:10px ; */
+          line-height: 80px;
+          background-color: #ccc;
+        }
+        a{
+            text-decoration: none;
+        }
+        section{
+            color: hsl(0, 100%, 50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        CSS: Cascading style sheets ngôn ngữ dùng để tạo phong cách cho trang web
+        giúp làm đẹp cho trang web
+
+        I-Các cách làm việc với CSS
+         1. inline
+         Css trực tiếp vào thẻ tag
+         viết css trong thẻ mở 
+         2. internal
+         mình sẽ tạo 1 cặp thẻ <style> sau đó viết CSS Trong cặp thẻ đó
+         3. external
+         mình sẽ tạo file có đuôi.css , sau đó phải link file vào trang HTML
+         rồi đi viết CSS trong file đó.
+
+         II-Các bộ chọn selector
+         thẻ tag hay element sẽ có các thuộc tính(property): class và id đây là những 
+         thuộc tính định hay cho thẻ.
+         class : nhiều thẻ có thể chung class
+         id    : là duy nhất tức là mỗi thẻ chỉ có 1 id duy nhất
+         Độ ưu tiên trong CSS
+         thẻ tag ==>class==> ID ==>impotant
+
+         III: các kiểu màu trong CSS
+         1.lấy màu theo tên tiếng anh : red, green, blue,.....
+         2. lấy màu theo mã hecxa
+         3. lấy theo mã màu rgb (red,green,blue)
+         4. rgba (a: anpha sẽ chạy từ 0 đến 1 );
+         5. hsl (hue- saturation lightness) (CSS3)
+
+         IV: Các đơn vị trong CSS
+         1. px
+         2. %
+         3. rem phụ thuộc vào kích thước màn hình 
+         4. em : phụ thuộc vào thằng cha chứa nó gần nhất nếu không có
+         thì sẽ ăn theo màn hình
+         5. vh : viewport height (chiều cao)
+            ví dụ kích thước chiều rộng là 500px thì
+            1vh bằng 5px
+            nếu kích thước 100px
+            thì 1vh ứng với 1px
+         6. vw : viewport width  (chiều rộng)
+         tương
+         ==> mục đích thiết kế web responsive
+
+         ***********************************
+         background : 
+         backcground-color : màu nền
+         background-image :
+         background-position:
+         background-repeat
+         background-size :
+         backgroun-attachment
+
+     -->
+     <section>
+        Lorem ipsum dolor sit amet consectetur.
+     </section>
+     <nav>
+        <a href="">Tin Tức</a>
+        <a href="">Bản tin </a>
+     </nav>
+     <p class="heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. In quas nostrum tempore labore omnis aut officia exercitationem voluptatibus dolore necessitatibus. Ullam, sequi? Nam ducimus quasi rerum ipsam deserunt, eaque voluptate.
+     Quia accusamus autem alias ducimus asperiores perferendis, cumque corporis veniam eveniet quae officia a beatae magnam reiciendis, aliquam non, rerum dolore velit veritatis incidunt ullam? Eos quibusdam ut omnis ab.
+     Eveniet sapiente consequuntur molestiae! Explicabo illum, veritatis rem deleniti corrupti esse quas distinctio, ea delectus odio natus repellendus maxime at enim. Voluptate ex debitis repellat voluptates, modi repellendus illum doloribus?</p>
+     <h1 style="color: red;">xin chào mọi người</h1>
+     <h2> css basic </h2>
+     <p>Lorem, ipsum dolor.</p>
+     <p> Lorem ipsum dolor sit amet.</p>
+     <div>
+        <section>
+            <h2> quyết tâm học css</h2>
+            <p>hello</p>
+        </section>
+       
+     </div>
+     <p> lorem1</p>
+     <p> lorem2</p>
+     <h3 class="title1" id="heading"> viết CSS theo cách  external 1 </h3>
+
+     <!-- <h3 class="title2"> viết CSS theo cách external 2 </h3> -->
+     <div class="title">  thứ 6!</div>
+     <div class="title">buổi học thứ 3</div>
+     <a href="">click</a>
+     <p>  ra-fukuoka 29-09-23 </p>
+
+</body>
+</html>
