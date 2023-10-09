@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: #dbdbdb;
+            height: 500px;
+            display: flex;
+           /* khi kích thước của item vượt kt màn hình sẽ tự động xuống hàng */
+          /* khoảng cách giữa các item */
+            column-gap: 5px;
+            /* align-content: flex-start; */
+            row-gap: 5px;
+            /* align-items: flex-start; */
+            /* align-content: space-between; */
+            /* justify-content: center;
+            align-items: center; */
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+            /* align-items: center; */
+            /* align-items: start; */
+
+            /* nắm chắc 2 trục khi học với flex
+            1.main  axis : trục chính
+            - thuộc tính ăn theo: justify-content.
+            2.cross axis : trục chéo
+            - thuộc tính ăn theo : align-item.
+            ==> 2 trục này vuông góc với nhau
+              ăn theo trục của flex -direction
+            Khi flex-direction: row; thì main-axis nằm ngang , cross-axis nằm dọc.
+            Khi  flex-direction: colum thì main-axis nằm dọc , cross-axis nằm ngang.
+             */
+        }
+        .container .item{
+           height: 300px;
+           border: 1px solid black;
+           width: 400px;
+            
+        }
+        .container .item1{
+            background-color: blue;
+            /* display: flex; */
+        }
+        .container .item2{
+            background-color: yellow;
+        }
+        .container .item3{
+            background-color: violet;
+        }
+       /*  .btn{
+            padding: 5px;
+            border-radius: 5px;
+            width: 75px;
+        }
+        .login{
+            background-color: red;
+        }
+        .register{
+            background-color: green;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 
+        flex: giúp cho việc dàn layout nhanh chóng, thuận tiện.
+     -->
+     <div class="container">
+        <div class="item item1">
+            1
+           <!-- <p>p1</p>
+           <p>p2</p>
+           <p>p3</p>
+           <p>p4</p>
+           <p>p5</p> -->
+        </div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item3">4</div>
+        <div class="item item3">5</div>
+        <div class="item item3">6</div>
+        <div class="item item3">7</div>
+
+     </div>
+
+    <!--  <button class="login btn">
+        login
+     </button>
+     <button class="register btn">
+        register
+     </button> -->
+</body>
+</html>

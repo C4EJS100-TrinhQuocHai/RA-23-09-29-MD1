@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Cách đặt tên trong CSS
+        Quy tắc đặt tên CSS chuẩn BEM
+        Block    : phần tử khối cha
+        Element  : phần tử con
+        Modifier : phần tử bổ sung ý nghĩa cho phần tử cha hoặc phần tử con.
+     CSS trang login theo quy tắc BEM
+     
+     -->
+    <div class="login" style="background-color: red;">
+        <div class="login__username">
+            <!-- username -->
+            <label for="username">Username</label>
+            <input id="username" class="login__username--name" type="text" 
+            placeholder="mời nhập tên tài khoản">
+        </div>
+        <div class="login__password">
+            <!-- password -->
+            <label for="">password</label>
+            <input class="login__password--pass" type="text" 
+            placeholder="mờI nhập password">
+        </div>
+        <div class="login__login">
+            <!-- button login  -->
+            <button class="login__login--login">Login </button>
+        </div>
+    </div>
+</body>
+
+</html>
