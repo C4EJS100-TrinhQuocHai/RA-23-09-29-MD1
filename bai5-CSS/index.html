@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"> -->
+    <style>
+        .container{
+            height: 500px;
+            width: 400px;
+            background-color: #dbdbdb;
+            position: absolute;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* position: relative;
+            top:50px;
+            left: 50px; */
+          /*   margin-top: 50px; */
+           position: absolute;
+           bottom: 30px;
+           left: 10px;
+         
+        }
+         .box2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+           /*  position: relative;
+            bottom: 50px;
+            left: 50px; */
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Position   : định vị các phần tử
+        1.static   : trạng thái mặc định
+        2.relative : vị trí tương đối
+        -Khi sử dụng position là relative thì nó sẽ lấy vị trí ban đầu của nó làm gốc
+
+        3.absolute : vị trí tuyệt đối
+        -nó sẽ theo thằng cha chứa nó gần nhất có thuộc tính position
+        - nếu không có thằng cha nào chứa nó có thuộc tính position thì sẽ ăn theo trình
+        duyệt
+        4.fixed    : hay dùng làm thanh header đứng yên
+        5.sticky  : ăn theo thanh scroll
+
+     -->
+    <span class="material-symbols-outlined">
+        shopping_cart
+    </span>
+      <div class="container">
+        <div class="box1">
+            box1
+            >
+        </div>
+        <div class="box2">
+            box2
+        </div>
+        <div class="box3">
+            box3
+        </div>
+      </div>
+</body>
+</html>
