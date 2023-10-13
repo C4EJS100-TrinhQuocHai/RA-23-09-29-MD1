@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  */
+        /*  */
+    </style>
+</head>
+<body>
+    <h1> JS BASIC</h1>
+    <!-- 
+        I: các cách để nhúng JS vào trang web
+        C1: đi viết JS trực tiếp vào thẻ tag.
+        C2: viết JS trong cặp thẻ script
+        C3. tạo file có đuôi .js rồi viết code trong đó
+        II- Biến cách khai báo biến 
+         Biến là gì?
+         + là dùng để gán giá trị 
+         Có bao nhiêu  từ khoá khai báo biến?
+         + 3 cách để khai báo biến
+         1. var
+         + có thể gán lại giá trị,khai báo lại được
+         + phạm vi hoạt động function
+         + có hoisting
+         hoisting là gì?
+         hoisting là việc khi khai báo biến sẽ đưa việc khai báo lên đầu.
+         2. let
+         + có thể gán lại giá trị nhưng không khai báo lại được
+         + phạm vi hoạt động là block-scope
+         + có hoisting( nhưng không truy cập được)
+         3. const
+         + thường dùng để khai báo hằng số.
+         + không thể gán lại giá trị, không thể khai báo lại,khi khai báo phải gán cho
+         nó 1 giá trị
+         + phạm vi hoạt động giống let
+         + có hoisting( nhưng không truy cập được.);
+         Sự khác nhau giữa chúng.
+         QUY TẮC ĐẶT TÊN BIẾN 
+         -không được bắt đầu bởi số,các từ kí tự ( trừ $,_),tránh đặt tên bởi các từ 
+         khoá đặc biệt trong js.(class,try, catch...)
+         -đặt theo quy tắc camel-case(chữ cái đầu viết thường các từ đầu sau viết hoa)
+         *************************************
+         III: DATA TYPE : các kiểu dữ liệu trong js
+         1.primitive type : kiểu dữ liệu đơn giản, kiểu dữ liệu nguyên thuỷ, kiểu tham trị
+            +string   : kiểu chữ
+            +number   : kiểu số
+            +undefined: không xác định
+            +null     : không có giá trị ( rỗng)
+            +NaN      : not a number ( không phải số)
+            +Boolean  : kiểu true/flase : kiểu đúng sai
+            (Symbol,bigInt)
+            
+         2.reference type : kiểu dữ liệu phức tạp, hay còn gọi là kiểu tham chiếu
+         ( Array,function,object)
+         
+         3.Kiểm tra kiểu dữ liệu (typeof)
+         -kiểm tra kiểu dữ liệu của NaN dùng.
+         Number.isNaN() ==> true /là NaN
+                        ==>flase/không phải NaN
+        IV :  Các hàm có sẵn trong JS
+        1.console.log(): giúp hiển thị kết quả để mình test xem các bước xử lý đã đúng chưa
+        2.alert()      : hiển thị hộp thông báo ở bên ngoài trình duyệt
+        3.confirm()   : hiển thị xác nhận đồng ý hay không đồng ý.
+        4.prompt ()   : hiển thị ô nhập dữ liệu.
+        DOM 
+        5.document.write() : hiển thị lên trình duyệt
+
+        **************************
+        V: operators : Toán tử
+        1. toán tử số học (+,-,*,/,**,%)
+         + %: là chia lấy dư
+        2. toán tử so sánh
+            ==,===,>,<,>=,<=,!=,!==;
+            == : so sánh giá trị
+            ===: so sánh giá trị và kiểu  dữ liệU
+        3. toán tử gán
+          =
+        4. toán tử logic
+         || &&
+         || : sẽ lấy truthy đầu tiên nếu không có thì mặc định lấy cuối cùng
+         && : lấy false đầu tiên không có mặc định lấy thăng cuối cùng.
+         + truthy: không phải falsy
+         + falsy : 0,null,undefined,NaN,flase,"",'',
+        5. toán tử tăng giảm
+        ++;
+        a++: hậu tố ( giá trị sẽ tăng sau)
+        ++a: tiền tố( giá  trị sẽ tăng trước)
+
+        --
+        6. toán tử nullish (nếu là null || undefined thì lấy thằng bên cạnh)
+        7. toán tử 3 ngôi ? : (bài thứ 2 học bài câu điều kiện)
+
+     -->
+     <!-- <button onclick="alert('xin chào')"> click </button> -->
+  <script>
+        let  result= "0" ?"hello!":"goodbye!";
+        console.log(result);
+        // let result= 0 ?? 5;
+        // console.log(result);
+     
+        // let a=8;
+        // let result= a++ + ++a + a++ + a;
+        // //8+10+10+11
+        // console.log(a);// 11  11 11  11 
+        // console.log(result);//39 31 ? 36
+        //     let a=5;
+        //    console.log(a++);
+        //    console.log(++a);
+
+    
+            // let result= "mai" && 7>8 && "hello";
+            // let result1 = 1<2<3; //true 1<3
+            // let result2 = 3>2>1; //true  true>1 1>1
+            // console.log(true==1);
+
+            // console.log(result);
+            // let result= 3 && null && 2;
+            // console.log(result);
+            // let a=5;
+            // let b="5";
+            // // a==b là true
+            // // a===b là flase
+            // console.log(a!=b);// flase
+            // console.log(a!==b); // true
+        // let result=5%7;
+        // console.log(result);
+        // let age= prompt("mời bạn nhập tuổi");
+        // console.log(age);
+        // document.write("js basic")
+        // let result= confirm("bạn đã đỦ 18 tuổi chưa");
+        // console.log(result);
+        //  let result=  "sơn"/5;
+        // //  console.log(typeof(result));
+        // console.log(Number.isNaN(result));
+        //    alert("bạn đã đủ 18 tuổi");
+        
+        // let a = "nguyễn minh hùng";
+        // console.log(typeof(a));
+        // let b=7;
+        // let c=null;
+        // let result=1;
+        // let f=3>1;
+        // console.log(result);
+       
+        
+        // const fullName = "nguyễn ngọc anh";
+        // fullName="nguyễn ngọc anh";
+        // var a;
+        // let b;
+        // const c;
+        // console.log(fullName);
+        // if(true){
+        //     var a=7;
+        // }
+        // console.log(a);
+        
+  </script>
+  
+</body>
+</html>
