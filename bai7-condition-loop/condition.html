@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Condition : Câu điều kiện
+        1.câu điều kiện if
+        condition là truthy thì phần thân của if được thực thi.
+        condition là falsy thì phần thân của if không được thực thi
+        falsy(0,"",'',null,undefined,NaN,false).
+        2.câu điều kiện if-else
+        -Nếu điều kiện if đúng thì phần else không thực thi
+        -Nếu điều kiện sai thì phần else được thực thi
+        3.câu điều kiện if-else bậc thang
+        -đúng cấp nào thì dừng cấp đó.
+        4.câu điều kiện if-else lồng.
+     -->
+     <script>
+         let a = 4;
+         if (a > 6) {
+               
+            } else if (a > 3) {
+                if(a>4){
+                    console.log(`${a} lớn hơn 4`);
+                }else{
+                    console.log(`${a} nhỏ hơn 4`);
+                }
+              
+            } else if (a > 13) {
+                
+            }
+        
+            // if (a > 6) {
+            //     console.log(`${a} >6 là sai`);
+            // }else if(a>14){
+            //     console.log(`${a} lớn hơn 4`);
+            // }else if(a>13){
+            //     console.log(`${a} lớn hơn 3`);
+            // }else if(a>10){
+            //     console.log(`${a} lớn hơn 2`);
+            // }
+          
+        // template string ` ` ==> có thể truyền biến vào bên trong dấu 
+        // let fullName=prompt("mời bạn nhập tên");
+        // console.log("xin chào",fullName,"bạn đang làm gì thế!");
+        // console.log(` xin chào ${fullName} bạn đang làm gì thế `);
+       
+       /*  if(5==="5"){
+            console.log("điều kiện đúng");
+        }else{
+            console.log("điều kiện sai");
+        } */
+        // if(0){
+        //     console.log("điều kiện đúng!!");
+        // }
+     </script>
+</body>
+</html>

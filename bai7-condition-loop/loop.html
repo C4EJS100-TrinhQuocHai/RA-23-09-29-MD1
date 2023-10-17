@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        LOOP
+        1.for
+        -thường gồm  3 thành phần
+         1. giá trị khởi tạo
+         2. điều kiện
+         3. bước nhảy
+         -các phần ngăn cách với nhau bởi dấu phẩy
+         -LUỒNG CHẠY: giá trị khởi tạo đi sánh điều kiện 
+          + Nếu điều kiện đúng thực thi phầN thân
+          + sau khi thực hiện phần thân quay về bước nhảy.
+        - CÂU LỆNH BREAK để thoát khỏi vòng lặp.
+        - Câu lệnh CONTINUE để bỏ qua lần lặp 
+        2.while
+        -Nếu điều kiện đúng(truthy) thì phần thân được thực thi
+        -Nếu điều kiện sai( falsy) thì phần thân không thực thi
+        3.do-while
+        -Thực thi trước sau đó thì mới kiểm tra điều kiện
+        ==>do-while chạy ít nhất 1 lần.
+     -->
+    <script>
+        // let i=1;
+
+        // while(i<=10){
+        //     //phần thân thực thi
+        //     console.log(i);
+        //     i++;
+        // }
+
+        /*   let count = 0;
+          while (count < 11) {
+              count++;//
+              //
+          }
+          console.log(count); */
+
+        // let result = 0;
+        // for (let i = 0; i < 5; i++) {
+        //     result += i;// result=result+i   6 +4
+        // }
+        // console.log(result);
+           
+        // let count = 0;
+        // while (count++ < 10) {// 2++ 4++ 6++ 8++
+        //     count++
+        // };
+        // console.log(count);
+        //  let count = 0; 
+        //  while (count++ < 10) { count++ }; console.log(count);
+        //  let i = 0;
+        // do {
+        //     //phần thực thi
+           
+        //     console.log(i);
+        //     i++
+           
+        // } while (i<=10)
+
+        //    let count = 0;
+        //     do { count++ } while (count++ < 10);//9++ 11++ 12
+        //      console.log(count);
+        let number=+prompt("mời bạn nhập số");
+        let count=0;
+        while(number!=9){
+            number=+prompt("mời nhập lại!");
+            count++;
+            if(count==3){
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
