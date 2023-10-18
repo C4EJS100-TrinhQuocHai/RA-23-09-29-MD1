@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            parseInt: mục đích để chuyển 1 chuỗi thành số nguyên
+            parseFloat : mục đích chuyển chuỗi thành số thực
+            **************************
+            isNaN():
+            -mục đích cũng để kiểm tra có phải NaN hay không?
+            -trước khi  kiểm tri nó parse ra dạng Number trước rồi mới đi kiểm tra.
+            Number.isNaN() : kiểm tra xem có phải NaN hay không
+            -nếu phải là true nếu không phải thì là false
+         */
+        // let result="q5.86abncn";
+        // console.log(parseInt(result));
+        // console.log(parseFloat(result));
+        // let result="mai";
+        // console.log(isNaN(result));//true
+        // console.log(Number.isNaN(result));//false
+        // let age=prompt("mời bạn nhập tuổi");
+        // if("25hh">18){
+        //     console.log(`tuổi của bạn ${age} lớn hơn 18`);
+        // }
+        // console.log(NaN==NaN);
+        /* 
+            kiểm tra dữ liệu đầu vào có phải là số hay không?
+            dùng isNaN();
+
+            kiểm tra xem có phải số nguyên hay không?
+            Number.isInterger()
+         */
+        /* 
+            LÀM TRÒN TRONG JS
+            Math.random():
+            trả về 1 số ngẫu nhiên từ 0 đến 1.(bao gồm 0 không bao gồm 1)
+            0 <= X <1
+            Math.floor (làm tròn xuống)
+            Math.ceil  (làm tròn lên)
+            toFxid()
+         */
+        // let text=+prompt("mời nhập ");//5
+        // // console.log(isNaN(text));
+        // console.log(Number.isInteger(text));
+        let result = 5.46913;
+        // console.log(result);
+        console.log(result.toString().slice(0, 5));
+        console.log(Math.floor(5.96));
+        console.log(Math.ceil(5.1));
+        console.log(result.toFixed(3));
+        console.log(Math.round(result));
+        console.log("11111111", 5 < 15 < 4);// 1<4
+        console.log(1 < 2 < 3);//true
+        console.log(3 > 2 > 1);//false 1>1
+
+        // let color = prompt("nhập 1 trong các màu xanh,đỏ,vàng");
+        // switch (color) {
+        //     case "xanh":
+        //         console.log("hiển thị màu xanh");
+        //     case "đỏ"  :
+        //         console.log("hiển thị màu đỏ");
+        //     case "vàng":
+        //         console.log("hiển thị màu vàng");
+        //     default:
+        //         console.log("màu không hợp lệ");
+        // }
+
+        // let weight = prompt("can nang(kg)");
+        // let height = prompt("chieu cao(m)");
+        // let bmi = weight / (height ** 2);
+
+        // function checkBMI(binh) {//parameter
+        //     if (binh >= 40) return "beo phi do 3";
+        //     if (binh >= 35 && binh <= 39.9) return "beo phi do 2";
+        //     if (binh >= 30 && binh <= 34.9) return "beo phi do 1";
+        //     if (binh > 25 && binh <= 29.9) return "tien beo phi";
+        //     if (binh >= 25) return "thua can";
+        //     if (binh >= 18.5 && binh <= 24.9) return "bin thuong";
+        //     return "can nang thap"
+        // }
+
+        // console.log(checkBMI(bmi))// argument
+        let time = prompt("nhap gio");
+        if (time < 0 || time >= 24) {
+            console.log("gio nhap vao khong hop le");
+        }else if(time<18){
+
+        }
+       
+            
+
+    </script>
+</body>
+
+</html>

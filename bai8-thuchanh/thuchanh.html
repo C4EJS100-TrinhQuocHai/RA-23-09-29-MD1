@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            tạo prompt cho người dùng nhập vào 1 số trong khoảng 2 đến 8.
+            sau đó in ra số người dùng chọn có khớp với số random từ 2 đến 8 hay không?
+            Math.random() 0.1-0.99
+         */
+        let random = Math.floor(Math.random() * 7) + 2;
+        let number = +prompt("mời bạn nhập đoán số trong khoảng từ 2 đến 8");
+        if (number == random) {
+            console.log("chúc mừng!");
+        } else {
+            console.log("bạn chọn sai rồi!");
+        }
+
+    </script>
+</body>
+
+</html>
