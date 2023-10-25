@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* 
+            input: hello
+            output : 
+            -h xuất hiện 1 lần
+            -e xuất hiện 1 lần
+            -l xuất hiện 2 lần
+            -o xuất hiện 1 lần
+        */
+       let text2="hello";//helo
+       let text1=[...new Set(text2)];
+       for (let i = 0; i < text1.length; i++) {
+            let count=0;
+            for (let j = 0; j < text2.length; j++) {
+                if(text1[i]==text2[j]){
+                    count++;//1
+                }
+            }
+            console.log(`${text1[i]} xuất hiện ${count} lần`);
+       }
+       // loại bỏ phần tử trùng nhau trong js
+    //    let arr=[5,6,6,4,4,4,4,5,6,7,8];
+    //    console.log(new Set(arr));
+    //    let result=[...new Set(arr)];//toán tử spread - rest 
+    //    console.log(result);
+
+    //    let obj={
+    //     name:"hoa",
+    //     name:"hồng",
+    //    }
+    //    console.log(obj);
+        
+    </script>
+</body>
+</html>
