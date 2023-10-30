@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            -shallow-clone -clone nông(clone không hết)
+            1.toán tử spread
+            2.Object.asign
+
+            -deep-clone -clone sâu (clone hết)
+            Dùng .JSON.parse(JSON.stringify);
+
+         */
+        let obj1={
+            name:"minh",
+            info:{
+                address:"Hà nội",
+            }
+        }
+        // let obj2={...obj1};// địa chỉ mới 
+        // obj1.name="Hương"
+         
+        // console.log(obj2.name);
+        // console.log(obj2.info.address);
+        let obj2=JSON.parse(JSON.stringify(obj1));
+
+        obj1.info.address = "HCM";
+        console.log(obj2.info.address);
+
+
+    </script>
+</body>
+</html>

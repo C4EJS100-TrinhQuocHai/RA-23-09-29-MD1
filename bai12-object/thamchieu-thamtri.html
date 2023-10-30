@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        tham chiếu tham trị
+        I. kiểu nguyên thuỷ -kiểu tham trị - gán giá trị
+        II.Kiểu phức tạp    -kiểu tham chiếu- gán địa chỉ ô nhớ
+     -->
+     <script>
+        let a=5;
+        let b=a;
+        a=15;
+        console.log(b);
+
+        let obj1={
+            name:"Hồng",
+        }
+        let obj2=obj1;
+        obj1.name="Hương";
+        console.log(obj2.name);
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*  let std1={
+            name:"hoa",
+            age:25
+        }
+        let std2={
+            name:"huệ",
+            age:20,
+        } */
+        // người ta sinh ra hàm tạo constructor
+
+        function Student(name,age) {
+            this.name1=name;
+            this.age1=age;
+            this.sayHello=function(){
+                console.log("xin chào!");
+            }
+        }
+        let std1= new Student("hoa",25);
+        let std2= new Student("huệ",20);
+        console.log(std1.sayHello());
+    </script>
+</body>
+</html>
