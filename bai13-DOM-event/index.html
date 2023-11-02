@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        DOM: Document object model ( mô hình đối tượng tài liệu)
+        -Khi trang web được tải lên thì trình duyệt sẽ tạo ra 1 mô hình DOM
+        ==> Từ mô hình Dom này chúng ta có thể thêm sửa xoá cập nhập 
+        các element,attribute,text,style.....
+        -I: Các thành phần trong Dom
+            1.element
+                + là các thẻ tag
+            2.attribute
+                + các thuộc tính của thẻ tag
+            3.text
+                + Nội dung chứa bên trong thẻ tag
+        ELEMENT: các cách để lấy ra element
+        1.lấy theo tên thẻ
+        getElementsByTagName(""): trả về 1 HTML collection dạng gần giống mảng;
+        -có thể lấy phần tử theo index, có thể dùng for để duyệt các phần tử
+        -Nhưng vì nó không phải mảng nên không thực hiện các phương thức làm việc
+        với mảng được.
+        2.lấy theo id.
+        -mỗi element định danh bởi 1 ID duy nhất.
+        ==> trả về trực tiếp đối tượng  (duy nhất 1)
+        3.lấy theo class
+        ==>trả về HTML collection (nhiều cái)
+        4.lấy theo querySelector
+        ==> trả về 1 đối tượng element đầu tiên
+        5.lấy  theo querySelectorAll (lấy cả);
+        ==> trả về  NODElliST gần giống mảng.
+        *******************************
+     -->
+    <h1 class="" id="heading"> DOM -thẻ h1 thứ nhất </h1>
+    <h3 class="title">thẻ h3 </h3>
+    <h1> thẻ h1 thứ 2 </h1>
+    <!-- <p style="color: red;"> xin chào.</p> -->
+    <p class="title hello"  > xin chào 111111.</p>
+    <p class="title"> xin chào 22222.</p>
+    <img src="" alt="">
+    <a href=""></a>
+    <button onclick="changeText()">changeText</button>
+    <script>
+        let element = document.getElementById("heading");
+                      document.getElementsByTagName("h1");
+        let elementByClass = document.getElementsByClassName("title");
+        let elementQuerySelector= document.querySelector(".title");
+        let elementQueryAll =document.querySelectorAll(".title");
+        console.log("elementQueryAll", elementQueryAll);
+        // console.log("elementQuerySelector", elementQuerySelector);
+        // console.log(elementByClass);
+        /*  let student={
+          name:"hoa",
+         }
+         student.age=25; */
+        // let number = [5, 6];
+        // console.log(number[1]);
+        // let element = document.getElementsByTagName("h1");
+        // console.log(element);
+        // element.push(5);
+        
+    </script>
+</body>
+
+</html>

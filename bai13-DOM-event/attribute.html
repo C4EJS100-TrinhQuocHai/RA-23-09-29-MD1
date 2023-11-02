@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            color:red;
+            font-size: 50px;
+        }
+        .title2{
+            background-color: green;
+        }
+        .title{
+            color: red;
+        }
+        .title2{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        ATTRIBUTE -thuộc tính
+        CRUD-
+        Cách thêm  attribute
+        + thêm class .className
+        + thêm id .id
+        + element .classList ( đang đi cập vào danh sách class của element)
+          + thêm class là add
+          + xoá class là remove
+          + kiểm tra xem class có tồn tại trong ele : contains
+          + toggle công tắc đóng mở class , nếu có thì xoá đi  nếu không có thì thêm vào
+        +setAttribute
+
+     -->
+     <p class="title1 "> Lorem, ipsum dolor.</p>
+     <p> bình </p>
+     <button onclick="test()"> click </button>
+     <script>
+        //  let element= document.getElementsByTagName("p")[1];
+        //     element.setAttribute("id","title")
+
+        /* let number=[5,8,9,6];
+        console.log(number[0]);
+        document.getElementsByTagName("p")[1].className="header"; */
+        // let element= document.getElementsByClassName("title1")[0];
+        // element.classList.add("title2");
+        // element.classList.remove("title1");
+         function test() {
+            let element= document.getElementsByTagName("p")[0];
+            element.classList.toggle("title");
+            element.classList.toggle("title2");
+            
+         }
+     </script>
+</body>
+</html>
