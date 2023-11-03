@@ -18,7 +18,7 @@
      -->
     <input id="job" type="text"> <button id="save" onclick="addTodo()">Add</button>
     <ul id="showJobs">
-        <!-- <li>
+       <!--  <li>
             công việc 1
             <button> sửa </button>
             <button>xoá</button>
@@ -44,6 +44,12 @@
         }
         let todos=[];
         // function để add todo
+        document.addEventListener("keypress",(e)=>{
+            // console.log(e.keyCode);
+            if(e.keyCode==13){
+                addTodo();
+            }
+        })
         function addTodo() {
             // console.log("111111");
             let inputValue= document.getElementById("job").value;
@@ -77,6 +83,7 @@
             // sau khi add xong phải gọi ngay hàm show job để hiển thị
             showJobs();
         }
+        
         // function hiển thị danh sách công việc
         function showJobs() {
             let text="";
