@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Storing data in the browser
+        (lưu trữ dữ liệu phía trình duyệt)
+        VD 1 cái ảnh tầm 20kb
+        1.localStorage
+         -Dung lượng : 5MB - (1MB=1024 KB);
+         -Khi lưu dữ liệu xong không bị mất đi
+        - cách lưu :
+            localStorage.setItem("manh",25);
+            localStorage.setItem("name","huy");
+            NHƯNG :
+            Lưu ý khi lưu dạng mảng hoặc object thì phải chuyển sang kiểu JSON để lưu
+            JSON.Stringify("giá trị")
+            Khi lấy về dùng nó đang ở dạng JSON thì phải parse ra dùng.
+            JSON.parse(localStorage.getItem("tên_key_khi lưu"));
+        - Cách xoá:
+         + xoá từng key
+          localStorage.removeItem("tên key muốn xoá");
+         + xoá hết tất cả các key
+           localStorage.clear();
+        - Cách lấy về
+         + localStorage.getItem("tên key muốn lấy")
+        2.session storage
+         -Dung lượng : 3MB
+         -Phiên làm việc dữ liệu chỉ tồn tại khi tab đang làm việc.
+        3.cookeis
+        - Dung lượng : 5kb
+        - Mình có thể set thời gian cho nó
+        - dùng để duy trì mỗi lần đăng nhập
+        - bắt content người dùng hay quan tâm tìm tiếm 
+     -->
+     <script>
+        //  localStorage.setItem("manh",25);
+        //  localStorage.setItem("name","huy");
+        // localStorage.removeItem("manh")
+        //    let result= localStorage.getItem("manh1");
+        //    console.log(result);
+        // sessionStorage.setItem("manh","cô đơn");
+        let numbers=[1,2,3];
+        // localStorage.setItem("numbers",numbers)
+        //  let convertJSON= JSON.stringify(numbers);
+        // localStorage.setItem("number",convertJSON);
+        // console.log(result);
+        let result=JSON.parse(localStorage.getItem("number"));
+       let obj={
+        name:"thuý",
+       }
+       localStorage.setItem("obj",JSON.stringify(obj))
+    </script>
+</body>
+</html>

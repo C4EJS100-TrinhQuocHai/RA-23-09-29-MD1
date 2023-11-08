@@ -33,7 +33,9 @@
             width: 100%;
             height: 200px;
         }
-
+        .product .product__item .product__item--cart:hover{
+                cursor: pointer;
+        }
         .product .product__item .product__item--image img {
             width: 100%;
             height: 90%;
@@ -71,6 +73,19 @@
 </head>
 
 <body>
+    <div class="header">
+        <div class="header__logo">
+            ảnh logo
+        </div>
+        <div class="header__navigation">
+            chứa các trang điều hướng
+        </div>
+        <div class="header__sign">
+            <button class="header__sign--signIn">signIn </button>
+            <button class="header__sign--signUp">signUp </button>
+
+        </div>
+    </div>
     <div class="product">
         <!-- <div class="product__item">
             <div class="product__item--image">
@@ -235,7 +250,7 @@
                                 <p class="product__item--price">
                                     price : ${products[i].price}
                                 </p>
-                                <p class="product__item--cart">
+                                <p onclick=addToCart() class="product__item--cart">
                                     buy cart
                                     <span class="material-symbols-outlined">
                                         shopping_cart
@@ -275,6 +290,7 @@
         function choosePage(a) {
             // console.log("1111",nowPage);
             let pageItem = document.getElementsByClassName("page-item");
+            // gán trang hiện tại bằng trang vừa click
             currentPage = a;
             for (let i = 0; i < pageItem.length; i++) {
                 if (i == a - 1) {
@@ -303,6 +319,18 @@
             }
             choosePage(currentPage);
         }
+        // function đi mua hàng
+        function addToCart() {
+            console.log("1111");
+            // kiểm tra xem người dùng đã đăng nhập hay chưa.
+            let checkLogin=localStorage.getItem("idUser");
+            if(!checkLogin){
+                console.log("vui lòng đăng nhập để mua hàng");
+                return;
+            }
+            console.log("đi mua hàng bình thường");
+        }
+        
     </script>
 
 </body>
