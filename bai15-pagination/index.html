@@ -221,6 +221,7 @@
                 id: 109,
             }
         ]
+        localStorage.setItem("products",JSON.stringify(products));
         //
         let itemPage = 3;
         let totalPage = Math.ceil(products.length / itemPage);
@@ -250,7 +251,7 @@
                                 <p class="product__item--price">
                                     price : ${products[i].price}
                                 </p>
-                                <p onclick=addToCart() class="product__item--cart">
+                                <p onclick=addToCart(${products[i].id}) class="product__item--cart">
                                     buy cart
                                     <span class="material-symbols-outlined">
                                         shopping_cart
@@ -299,7 +300,6 @@
                     pageItem[i].classList.remove("page");
 
                 }
-
             }
             startEnd(a);
             showProduct();
@@ -320,15 +320,52 @@
             choosePage(currentPage);
         }
         // function đi mua hàng
-        function addToCart() {
-            console.log("1111");
+        function addToCart(idProduct) {
+            console.log("idProduct", idProduct);
             // kiểm tra xem người dùng đã đăng nhập hay chưa.
             let checkLogin=localStorage.getItem("idUser");
+            let users = JSON.parse(localStorage.getItem("users"))||[];
+            let products = JSON.parse(localStorage.getItem("products")) || [];
+
+
             if(!checkLogin){
                 console.log("vui lòng đăng nhập để mua hàng");
                 return;
             }
-            console.log("đi mua hàng bình thường");
+            // đi lấy giỏ hàng của user để đi mua hàng
+            for (let i = 0; i < users.length; i++) {
+                if(users[i].id==checkLogin){
+                    // lấy ra được giỏ hàng của user
+                    // users[i].cart
+                    // có id sản phẩm rồi thì xét xem đó là sản phẩm nào
+                    for (let j = 0; j < products.length; j++) {
+                        if(products[j].id==idProduct){
+                            // lấy ra được sản phẩm
+                            console.log("33333", products[j]);
+                            // trước khi thêm vào giỏ hàng thì phải xác định sản phẩm này
+                            // đã có trong giỏ hàng hay chưa
+                            /* 
+                            nếu có thì tăng quality lên
+                            nếu chưa có sản phẩm thì push vào bình thường
+                             */
+                            let result= users[i].cart.findIndex((item)=>{
+                                return item.id==products[j].id
+                            })
+                            if(result!=-1){
+                                // chứng tỏ sản phẩm đã có trong giỏ hàng
+                               users[i].cart[result].quanlity=++users[i].cart[result].quanlity;
+                               localStorage.setItem("users",JSON.stringify(users));
+                            }else{
+                                users[i].cart.push({...products[j] ,quanlity:1});
+                               localStorage.setItem("users", JSON.stringify(users));
+                            }
+                            break;
+                        }
+                        
+                    }
+                }
+                
+            }
         }
         
     </script>
