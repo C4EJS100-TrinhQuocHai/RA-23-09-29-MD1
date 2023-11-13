@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <!-- Hệ thống lưới trong bootstrap
+        -Mặc định bootstrap sẽ chia màn hình thành 12 cột bằng nhau.
+        -Những điểm (breakpoint trong bootstrap)
+        X<576px: ứng với class col
+        576px<=X<768px ứng với class sm (small)
+        768<=X<992px  ứng với class md(medium)
+        992px=<X<1200px ứng với class lg(large)
+        1200px<=X<1400px ứng với class xl (extra-large)
+        >1400px ứng  với class xxl Extra extra large
+
+     -->
+    <h1> Grid-bootstrap </h1>
+    
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-8 col-sm-1 col-md-4 col-lg-9 bg-success" >
+                1
+            </div>
+            <div class="col-2 col-sm-4 col-md-4 col-lg-1 bg-info" >
+                2
+            </div>
+            <div class="col-2 col-sm-7 col-md-4 col-lg-2  bg-danger">
+                3
+            </div>
+        </div>
+    </div>
+</body>
+</html>
